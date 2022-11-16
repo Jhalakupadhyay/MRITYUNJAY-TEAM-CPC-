@@ -387,9 +387,9 @@ def browseFiles(MainWindow, self):
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(590, 300)
+        MainWindow.resize(602, 460)
         MainWindow.setMinimumSize(QtCore.QSize(590, 300))
-        MainWindow.setMaximumSize(QtCore.QSize(590, 300))
+        MainWindow.setMaximumSize(QtCore.QSize(900, 900))
         if sys.platform == "win32":
             icon = QtGui.QIcon()
             icon.addPixmap(QtGui.QPixmap(":/res/ico/AntiVirus_ico.svg1"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -399,7 +399,7 @@ class Ui_MainWindow(object):
             pass
         MainWindow.setStyleSheet("")
         self.SideBar = QtWidgets.QLabel(MainWindow)
-        self.SideBar.setGeometry(QtCore.QRect(-10, 45, 61, 271))
+        self.SideBar.setGeometry(QtCore.QRect(-10, 45, 61, 600))
         self.SideBar.setStyleSheet("background-color: rgb(81, 89, 97);")
         self.SideBar.setText("")
         self.SideBar.setObjectName("SideBar")
@@ -660,7 +660,7 @@ class Ui_MainWindow(object):
         self.LoadingPageTitle.raise_()
         self.Tabs.addWidget(self.LoadingPage)
         self.version_display = QtWidgets.QLabel(MainWindow)
-        self.version_display.setGeometry(QtCore.QRect(1, 284, 47, 20))
+        self.version_display.setGeometry(QtCore.QRect(7, 284, 47, 330))
         self.version_display.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.1468, fy:0.1468, stop:1 rgba(0, 0, 0, 0));")
         self.version_display.setObjectName("version_display")
         self.SideBar_2 = QtWidgets.QLabel(MainWindow)
@@ -848,7 +848,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", f"-MRITYUNJAY- [v{VERSION}] [{DEV}]"))
-        self.HomeTitle.setText(_translate("MainWindow", "--------MRITYUNJAY--------"))
+        self.HomeTitle.setText(_translate("MainWindow", "MRITYUNJAY"))
         self.SelectFileButton.setText(_translate("MainWindow", "Scan File"))
         self.ReportIssueButton.setText(_translate("MainWindow", "report issue"))
         self.SettingsTitle.setText(_translate("MainWindow", "Settings"))
