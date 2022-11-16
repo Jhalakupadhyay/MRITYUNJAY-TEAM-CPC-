@@ -31,7 +31,7 @@ VERSION = "0.1"
 DEV     = "WITH LOVE TEAM CPC"
 
 # url´s
-Report_issues = "https://github.com/Len-Stevens/Python-Antivirus/issues/new"
+Report_issues = "https://github.com/Jhalakupadhyay/MRITYUNJAY-TEAM-CPC-/blob/master/Report"
 Submit_sample = "https://github.com/Len-Stevens/Python-Antivirus/discussions/8"
 virus_total_api = "https://www.virustotal.com/api/v3/files/report"
 meta_defender_api = "https://api.metadefender.com/v4/hash/" # + hash
@@ -392,7 +392,7 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(590, 300))
         if sys.platform == "win32":
             icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(":/res/ico/AntiVirus_ico.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            icon.addPixmap(QtGui.QPixmap(":/res/ico/AntiVirus_ico.svg1"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
             MainWindow.setWindowIcon(icon)
         # OS is not windows so don´t show icon since its a .ico file
         else:
@@ -723,9 +723,9 @@ class Ui_MainWindow(object):
                     apply_stylesheet(object, theme=f'{current_dir}\\res\\themes\\light_pink.xml', extra=extra)
                 else:
                     apply_stylesheet(object, theme=f'{current_dir}/res/themes/dark_red.xml', extra=extra)
-                self.SideBar.setStyleSheet("background-color: rgb(81, 89, 97);")
-                self.SideBar_2.setStyleSheet("background-color: rgb(81, 89, 97);")
-                self.HomeTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
+                self.SideBar.setStyleSheet("background-color: rgb(0, 139, 139);")
+                self.SideBar_2.setStyleSheet("background-color: rgb(0, 139, 139);")
+                self.HomeTitle.setStyleSheet("background-color: rgb(0, 139, 139);")
                 self.SettingsTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
                 self.VirusResultsTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
                 self.LoadingPageTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
@@ -848,7 +848,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", f"-MRITYUNJAY- [v{VERSION}] [{DEV}]"))
-        self.HomeTitle.setText(_translate("MainWindow", "Home"))
+        self.HomeTitle.setText(_translate("MainWindow", "--------MRITYUNJAY--------"))
         self.SelectFileButton.setText(_translate("MainWindow", "Scan File"))
         self.ReportIssueButton.setText(_translate("MainWindow", "report issue"))
         self.SettingsTitle.setText(_translate("MainWindow", "Settings"))
