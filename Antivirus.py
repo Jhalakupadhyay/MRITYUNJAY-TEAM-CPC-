@@ -65,8 +65,22 @@ def SaveSettings(self):
     
 # remove file
 def removeFile(file):
-        try:
+            msgBox = QtWidgets.QMessageBox()
+            msgBox.setIcon(QtWidgets.QMessageBox.Information)
+            msgBox.setText("Info")
+            msgBox.setInformativeText(f"""\
+File successfully deleted.
+File: {file}"
+            """)
             os.remove(file)
+            
+            # remove window title bar
+            msgBox.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
+            msgBox.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+            msgBox.exec_()
+            '''           # file deleted = show success message
+        try:
+
         except:
             # file coudn't be deleted = show error message
             msgBox = QtWidgets.QMessageBox()
@@ -80,19 +94,9 @@ File: {file}"
             msgBox.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
             msgBox.setWindowFlags(QtCore.Qt.FramelessWindowHint)
             msgBox.exec_()
-        finally:
-            # file deleted = show success message
-            msgBox = QtWidgets.QMessageBox()
-            msgBox.setIcon(QtWidgets.QMessageBox.Information)
-            msgBox.setText("Info")
-            msgBox.setInformativeText(f"""\
-File successfully deleted.
-File: {file}"
-            """)
-            # remove window title bar
-            msgBox.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
-            msgBox.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-            msgBox.exec_()
+            '''
+       
+           
 
 
 # display results
@@ -727,8 +731,8 @@ class Ui_MainWindow(object):
                 self.SideBar_2.setStyleSheet("background-color: rgb(0, 139, 139);")
                 self.HomeTitle.setStyleSheet("background-color: rgb(0, 139, 139);")
                 self.SettingsTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
-                self.VirusResultsTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
-                self.LoadingPageTitle.setStyleSheet("background-color: rgb(81, 89, 97);")
+                self.VirusResultsTitle.setStyleSheet("background-color: rgb(0, 139, 139);")
+                self.LoadingPageTitle.setStyleSheet("background-color: rgb(0, 139, 139);")
                 self.LightModeButton.setText("Light Mode")
             if style == "Light":
                 if sys.platform.startswith('win'):
@@ -857,7 +861,7 @@ class Ui_MainWindow(object):
         self.SaveSettingsButton.setText(_translate("MainWindow", "Save Config"))
         self.UseMetaDefenderApiCheckBox.setText(_translate("MainWindow", "Use Meta Defender api to check hash"))
         self.MetaDefenderApiKey.setPlaceholderText(_translate("MainWindow", "Enter your Meta Defender api Key here"))
-        self.VirusResultsTitle.setText(_translate("MainWindow", "Virus Scan Results"))
+        self.VirusResultsTitle.setText(_translate("MainWindow", "MRITYUNJAY"))
         self.FileName.setText(_translate("MainWindow", "File Name: "))
         self.FilePath.setText(_translate("MainWindow", "File Path: "))
         self.FileHash.setText(_translate("MainWindow", "File Hash: "))
